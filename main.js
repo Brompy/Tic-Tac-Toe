@@ -37,6 +37,8 @@ document.addEventListener('click', event => {
         
             target.classList.add('disabled')
             target.classList.add(game.xTurn ? 'x' : 'o')
+
+            game.xTurn = !game.xTurn
     
     }
 
