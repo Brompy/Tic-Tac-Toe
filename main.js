@@ -1,20 +1,33 @@
+// Game logic: turns and win states
 const game = {
-    xTurn: true;
+    xTurn: true,
     xState: [],
     oState: [],
     winningStates: [
-        // Rows
+        // by Rows
         ['0', '1', '2'],
         ['3', '4', '5'],
         ['6', '7', '8'],
 
-        //Columns
+        // by Columns
         ['0', '3', '6'],
         ['1', '4', '7'],
         ['2', '5', '8'],
 
-        //Diagonal
+        //by Diagonal
         ['0', '4', '8'],
         ['2', '4', '6']
     ]
 }
+
+// Add events for clicking on squares
+
+document.addEventListener('click', event => {
+    const target = event.target
+    const isCell = target.classList.contains('grid-cell')
+    const isDisabled = target.classList.contains('disabled')
+
+    if (isCell && !isDisabled) {
+        //Player clicks on a cell that's empty
+    }
+});
