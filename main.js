@@ -39,14 +39,14 @@ document.addEventListener('click', event => {
             target.classList.add(game.xTurn ? 'x' : 'o')
 
             game.xTurn = !game.xTurn
-    
+
+            if (!document.querySelectorAll('.grid-cell:not(.disabled').length) {
+                document.querySelector('.game-over').classList.add('visible')
+                document.querySelector('game-over-text').textContent = 'Draw!'
+            }
     }
 
-    if (!document.querySelectorAll('.grid-cell:not(.disabled').length) {
-        document.querySelector('.game-over').classList.add('visible')
-        document.querySelector('game-over-text').textContent = 'Draw!'
-    }
-
+  
     game.winningStates.forEach(winningState => {
         const xWins = winningState.every(state => game.xState.includes(state))
         const oWins = winningState.every(state => game.oState.includes(state))
