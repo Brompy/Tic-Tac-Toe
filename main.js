@@ -39,4 +39,9 @@ document.addEventListener('click', event => {
             target.classList.add(game.xTurn ? 'x' : 'o')
     
     }
+
+    if (!document.querySelectorAll('.grid-cell:not(.disabled').length) {
+        document.querySelector('.game-over').classList.add('visible')
+        document.querySelector('game-over-text').textContent = 'Draw!'
+    }
 });
