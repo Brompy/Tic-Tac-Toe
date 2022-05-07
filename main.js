@@ -29,5 +29,14 @@ document.addEventListener('click', event => {
 
     if (isCell && !isDisabled) {
         //Player clicks on a cell that's empty
+        const cellValue = target.dataset.value
+
+            game.xTurn === true
+            ? game.xState.push(cellValue)
+            : game.oState.push(cellValue)
+        
+            target.classList.add('disabled')
+            target.classList.add(game.xTurn ? 'x' : 'o')
+    
     }
 });
