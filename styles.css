@@ -73,7 +73,7 @@ Add X and O emojis to cells
 
 .game-over-text {
     position: absolute;
-    top: -200px;
+    top: -50px;
     font-size: 60px;
     font-family: sans-serif;
     font-weight: bold;
